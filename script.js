@@ -16,9 +16,9 @@ axios.get(endpoint)
   .then(response =>{
     const photosArray = response.data
     console.log(photosArray)
-    photosArray.forEach(photo => {
+    photosArray.forEach(photo => {      
       const {title, url} = photo
-      row.innerHTML += `<div class="column debug">
+      row.innerHTML += `<div class="column d-flex center debug">
          <div class="card debug">
            <img class="pin" src="./assets_day1/img/pin.svg" alt="">
            <div class="img">
@@ -35,3 +35,5 @@ axios.get(endpoint)
   .catch(e =>
     console.log(e)
   )
+
+

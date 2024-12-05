@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Edu TAS Beginner", cursive;
-  /* font-optical-sizing: auto; */
+  font-optical-sizing: auto; 
 }
 
 /* .debug{
@@ -18,42 +18,54 @@ img{
 
 header{
   background-image: url(./assets_day1/img/wall.png);
+  background-size: auto;
   font-size: 70px;
-  font-weight: 700;
+  font-weight: bolder;
   font-style: normal;
   height: 145px;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
 }
   
-  body{
-    background-image: url(./assets_day1/img/cork.png);  
+body{
+  background-image: url(./assets_day1/img/cork.png);  
+  background-size: contain;
+  font-style: italic;
+  font-size: 15px;
 }
-
+main{
+  padding-top: 145px;
+}
 .container{
   padding-top: 45px;
-  max-width: 960px;
+  max-width: 940px;
   margin: 0 auto;
 }
 
 .row{
   display: flex;
   flex-wrap: wrap;
+  margin: -13px;
 }
-
 .column{
+  margin-top: 25px;
   width: calc(100% / 3);
-  padding: 1rem;
+  flex-direction: column;
 }
 
 .card{
   padding: 15px;
   height: 360px;
+  width: 295px;
   background-color: #FFFFFF;
   position: relative;
+  box-shadow: 1px 1px 10px  rgb(67, 66, 66);
 }
 
 .pin{
-  height: 25px;
-  width: 25px;
+  height: 30px;
+  width: 30px;
   position: absolute;
   left: 130px;
   top: -5px;
@@ -62,7 +74,7 @@ header{
 }
 .caption{
   padding-top: 15px;
- 
+  text-transform: capitalize;
 }
 
 .d-flex{
@@ -75,3 +87,27 @@ header{
   align-items: center;
 }
 
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 992px){
+  .column{
+    width: calc(100% / 2);
+  }
+  .container{
+    max-width: 615px;
+  }
+  header{
+    font-size: 6rem;
+    font-weight: bolder;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .column{
+    width: 100%;
+  }
+  .container{
+    max-width: 300px; 
+  }
+}
