@@ -24,8 +24,6 @@ header{
   font-style: normal;
   height: 145px;
   width: 100%;
-  position: fixed;
-  z-index: 1;
 }
   
 body{
@@ -33,10 +31,6 @@ body{
   background-size: contain;
   font-style: italic;
   font-size: 15px;
-}
-
-main{
-  padding-top: 145px;
 }
 
 .container{
@@ -62,6 +56,7 @@ main{
   width: 295px;
   background-color: #FFFFFF;
   box-shadow: 1px 1px 10px  rgb(67, 66, 66);
+  transition: transform, rotate  .5s;
 }
 
 .pin{
@@ -113,6 +108,20 @@ main{
   flex-direction: column;
 }
 
+.hide{
+  display: none;
+}
+
+.card:hover{
+ transform: scale(1.1);
+ rotate: 10deg;
+ box-shadow: 2px 2px 15px  rgb(67, 66, 66);
+ z-index: 1;
+}
+
+.card:hover .pin{
+  display: none;
+}
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 992px){
