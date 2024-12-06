@@ -19,8 +19,8 @@ axios.get(endpoint)
     photosArray.forEach(photo => {      
       const {title, url} = photo
       row.innerHTML += `<div class="column d-flex center debug">
-         <div class="card debug">
-           <img class="pin" src="./assets_day1/img/pin.svg" alt="">
+         <div class="card relative debug">
+           <img class="pin absolute" src="./assets_day1/img/pin.svg" alt="">
            <div class="img">
              <img id="photo" src="${url}" alt="img">
            </div>

@@ -34,9 +34,11 @@ body{
   font-style: italic;
   font-size: 15px;
 }
+
 main{
   padding-top: 145px;
 }
+
 .container{
   padding-top: 45px;
   max-width: 940px;
@@ -59,18 +61,30 @@ main{
   height: 360px;
   width: 295px;
   background-color: #FFFFFF;
-  position: relative;
   box-shadow: 1px 1px 10px  rgb(67, 66, 66);
 }
 
 .pin{
   height: 30px;
   width: 30px;
-  position: absolute;
   left: 130px;
   top: -5px;
+}
 
+.overlay{
+ background-color: rgba(0, 0, 0, 0.788);
+ z-index: 2;
+ height: 100%;
+ width: 100%;
+}
 
+.close{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  height: 37px;
+  width: 87px;
+  margin-bottom: 35px;
+  border-radius: 0%;
 }
 .caption{
   padding-top: 15px;
@@ -87,6 +101,17 @@ main{
   align-items: center;
 }
 
+.absolute{
+  position: absolute;
+}
+
+.relative{
+  position: relative;
+}
+
+.direction-column{
+  flex-direction: column;
+}
 
 /* MEDIA QUERIES */
 
