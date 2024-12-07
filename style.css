@@ -122,6 +122,11 @@ body{
 .card:hover .pin{
   display: none;
 }
+
+.selectedImg{
+  height: 600px;
+  width: 600px;
+}
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 992px){
