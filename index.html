@@ -13,17 +13,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&display=swap" rel="stylesheet">
 
   <!-- AXIOS -->
-   <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.8/axios.js' integrity='sha512-+dJa1RvuE8/HFftifMtr7hqixdEkb/DizfXUZAA0pyZeVdNnyZyKy9RnIWi0JSWUznbCNbaQNn0E6nbtrdL+9g==' crossorigin='anonymous'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.8/axios.js' integrity='sha512-+dJa1RvuE8/HFftifMtr7hqixdEkb/DizfXUZAA0pyZeVdNnyZyKy9RnIWi0JSWUznbCNbaQNn0E6nbtrdL+9g==' crossorigin='anonymous'></script>
 
 
   <title>Photo Blog</title>
 </head>
 <body class="relative">
-  <div class="overlay absolute d-flex center direction-column hide">
-    <button class="close">Chiudi</button>
-    <div class="selectedImg relative">
-      
-    </div> 
+  <div class="overlay fixed absolute hide">
+    <div class="selected-block d-flex direction-column center fixed">
+     <button class="close">Chiudi</button>
+     <div class="selectedImg relative"></div> 
+    </div>
   </div>
   <header>
     <p class="d-flex center">ESTATE '24</p>
