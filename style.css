@@ -19,11 +19,12 @@ img{
 header{
   background-image: url(./assets_day1/img/wall.png);
   background-size: auto;
-  font-size: 70px;
+  font-size: 100px;
   font-weight: bolder;
   font-style: normal;
   height: 145px;
   width: 100%;
+  text-align: center;
 }
   
 body{
@@ -77,6 +78,7 @@ body{
 .selected-block{
   left: calc(50% - (400px/2));
 }
+
 .close{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
@@ -148,11 +150,7 @@ body{
   .container{
     max-width: 615px;
   }
-  header{
-    font-size: 6rem;
-    font-weight: bolder;
-  }
-}
+} 
 
 @media screen and (max-width: 768px){
   .column{
@@ -161,4 +159,15 @@ body{
   .container{
     max-width: 300px; 
   }
+
+  .selectedImg{
+    height: 350px;
+    width: 350px;
+  }
+
+  .selected-block{
+    left: calc(50% - (350px/2));
+  }
+
+  
 }
