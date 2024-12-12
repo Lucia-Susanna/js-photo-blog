@@ -1,4 +1,4 @@
-// prendo gli elementi che mi serviranno: la column in cui andrò a inserire l'html delle card, la img della card e la caption
+// prendo la row in cui andrò a inserire l'html delle card                                                                                    
 //l'api in questo caso serve a generare un numero di immagini con descrizione pari a quanto indicato in _limit 
 // mi restituisce un json in cui mi rervono questi elementi: title e url
 // salvando questi due elementi in una costante vado a inserirli man mano (con unn ciclo) nell'html della card concatenandoli
@@ -7,11 +7,13 @@
 // richiamo i nodi dal document
 const row = document.querySelector('.row');
 const cardNumber = 6
+
 const selectedImg = document.querySelector('.selectedImg')
 //salvo l'endpoint
 const endpoint = 'https://jsonplaceholder.typicode.com/photos?_limit=' + cardNumber;
-let selected = [];
-let allImg = [];
+
+let allImg= [];
+
 //faccio la chiamata all'api
 axios.get(endpoint)
 .then(response =>{
@@ -33,9 +35,9 @@ axios.get(endpoint)
     </div>
     </div>
     </div>`
-    selected.push(`<img class="selected absolute" src="${url}" alt=""></img>`)
+    allImg.push(`<img class="absolute" src="${url}" alt=""></img>`)
   })
-  console.log(selected)
+  console.log(allImg)
   
   // seleziono nel codice html tutti i tag con classe img
   const images = document.querySelectorAll('.img')
@@ -44,8 +46,9 @@ axios.get(endpoint)
   images.forEach(image =>{
     image.addEventListener('click', () => overlay.classList.remove('hide'))  
 
+  // 
   for (let i=0 ; i< images.length; i++){
-    images[i].addEventListener('click', () => selectedImg.innerHTML = selected[i] )
+    images[i].addEventListener('click', () => selectedImg.innerHTML = allImg[i] )
   }  
 
 })
@@ -56,7 +59,6 @@ axios.get(endpoint)
 )
 
 // al click del bottone aggiungo la classe hide all'overlayer
-// al click di una qualsiasi card tolgo la classe hide
 
 const btn = document.querySelector('.close')
 const overlay = document.querySelector('.overlay')
